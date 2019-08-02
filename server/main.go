@@ -9,7 +9,6 @@ import (
 
 var _baseDir string
 
-// hello hi how are you
 
 func checkFatal(err error) {
 	if err != nil {
@@ -26,6 +25,9 @@ func createStaticFileServer(stripPattern string) http.Handler {
 	mux.Handle("/", http.StripPrefix(stripPattern, http.FileServer(fileDir)))
 	return &mux
 }
+
+// F look at the console
+
 
 func getBaseDir() string {
 	if _baseDir != "" {
